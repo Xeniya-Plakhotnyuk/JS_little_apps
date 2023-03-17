@@ -1,0 +1,39 @@
+h1{
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#increment_btn{
+    background: darkred;
+}
+
+#save_btn {
+    background: darkgreen;
+}
+
+#clean{
+    background: lightblue;
+}
