@@ -1,0 +1,75 @@
+h1{
+    color: goldenrod;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    
+}
+
+body{
+    background-image: url(casino.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+p{
+    color: antiquewhite;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+} 
+
+#message-el{
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.container{
+    
+        display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         gap:10px;
+         
+}
+
+
+button{
+   border: none;
+    border-radius: 18px;
+    padding:  10px 20px;
+    color: rgb(1, 32, 13);
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 5px 5px 3px rgb(1, 32, 13);
+    font-weight: bold; 
+    max-width: 70%;
+    }
+
+.btn_start{
+        background-color: rgb(180, 101, 255);
+         font-size: 30px;
+   
+}
+
+.btn_card{
+    background-color: goldenrod;
+    font-size: 28px;
+}
+
+.btn_start:hover{
+    background-color: rgb(152, 48, 249);
+    transition: ease-in 0.3s;
+}
+
+.btn_card:hover{
+    background-color: rgb(220, 119, 10);
+    transition: ease-in 0.3s;
+}
+
+
+
