@@ -2,13 +2,14 @@
 let firstCard = 11
 let secondCard = 10
 let sum = firstCard + secondCard
+let cards = [firstCard,secondCard ]
 
 let btn = document.querySelector('.btn_start')
 btn.addEventListener('click', startGame)
 let sumEl = document.querySelector('#sum-el')
 let cardsEl = document.querySelector('#cards')
 let drawCard = document.querySelector(".btn_card")
-drawCard.addEventListener('ckick',newCard)
+drawCard.addEventListener('ckick', newCard)
 
 
 let messageEl = document.getElementById('message-el')
@@ -17,9 +18,8 @@ let isAlive = true
 
 let message = ' '
 
-
-function startGame(){
-    cardsEl.textContent = 'Cards: ' + firstCard + " / " + secondCard
+function renderGame(){
+    cardsEl.textContent = 'Cards: ' + cards[0] + " / " + cards[1]
     sumEl.textContent = 'Sum: ' + sum
 if (sum <= 20){
    message = "Do you want to draw a new card?"
@@ -34,7 +34,15 @@ messageEl.textContent = message
 
 }
 
+function startGame(){
+    renderGame()
+}
+
+
+
 function newCard(){
+    let card = 6
+    sum += card
 
 }
 
