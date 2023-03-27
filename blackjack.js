@@ -1,25 +1,52 @@
+let cards = []
+let sum = 0
+let isAlive = false
+let message = ' '
 
-let firstCard = 11
-let secondCard = 10
-let sum = firstCard + secondCard
-let cards = [firstCard,secondCard ]
+
 
 let btn = document.querySelector('.btn_start')
 btn.addEventListener('click', startGame)
 let sumEl = document.querySelector('#sum-el')
 let cardsEl = document.querySelector('#cards')
 let drawCard = document.querySelector(".btn_card")
-drawCard.addEventListener('ckick', newCard)
+drawCard.addEventListener('click', newCard)
 
 
 let messageEl = document.getElementById('message-el')
 let hasBlackJack = false
-let isAlive = true
 
-let message = ' '
+
+function getRandomCard(){
+let randomNumber =  Math.floor(Math.random() * 13 + 1)
+if ( randomNumber > 10){
+    return 10
+} else if (randomNumber === 1){
+    return 11
+} else {
+    return randomNumber
+}
+
+}
+
+function startGame(){
+isAlive = true
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
+cards = [firstCard,secondCard]
+sum = firstCard + secondCard
+
+  renderGame()  
+}
 
 function renderGame(){
-    cardsEl.textContent = 'Cards: ' + cards[0] + " / " + cards[1]
+    cardsEl.textContent = "Cards: "
+
+    for(let i = 0; i < cards.length; i++){
+     cardsEl.textContent += cards[i] + ' ' 
+    }
+
+    
     sumEl.textContent = 'Sum: ' + sum
 if (sum <= 20){
    message = "Do you want to draw a new card?"
@@ -34,15 +61,12 @@ messageEl.textContent = message
 
 }
 
-function startGame(){
-    renderGame()
-}
-
-
-
 function newCard(){
-    let card = 6
+    let card = getRandomCard()
     sum += card
+    cards.push(card)
+
+    renderGame() 
 
 }
 
