@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convertor</title>
+    <link rel="stylesheet" href="convertor.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <h2>Imperial/Metric Unit Conversion</h2>
+
+        <input type="number" class="inputField" />
+        <button class="btn">Convert</button>
+      </div>
+
+      <div class="container">
+        <div class="calc_field">
+          <p>Length (Meter/Feet)</p>
+          <p class="met_feet"></p>
+          <p class="feet_met"></p>
+        </div>
+
+        <div class="calc_field">
+          <p>Volume (Liters/Gallons)</p>
+          <p class="lit_gal"></p>
+          <p class="gal_lit"></p>
+        </div>
+
+        <div class="calc_field">
+          <p>Mass (Kilograms/Pounds)</p>
+          <p class="kilo_pounds"></p>
+          <p class="pounds_kilo"></p>
+        </div>
+      </div>
+
+      <button>Clear All</button>
+    </div>
+
+    <script src="convertor.js"></script>
+  </body>
+</html>
