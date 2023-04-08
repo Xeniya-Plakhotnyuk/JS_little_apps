@@ -51,10 +51,15 @@ button {
     padding: 4px 10px;
     border-radius: 4px;
     margin: 0 5px;
+    padding: 10px;
 }
 
 .buttons-wrapper {
     display: flex;
     justify-content: center;
     margin: 10px 0 40px;
+}
+
+#pop-btn, #shift-btn{
+    background-color: #e66374;
 }
